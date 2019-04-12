@@ -33,7 +33,7 @@ namespace Roulette2017
             Console.WriteLine($"The winning number is {selectedRoulette}");
             Console.WriteLine($"Winning bets are as follows:" +
                 $"\nBin Number {binWin(selectedRoulette, index)}\t{evenOddWin(selectedRoulette, index)}" +
-                $"\t{colorWin(selectedRoulette, index)}\t{lowHighWin(selectedRoulette, index)}\t{dozensWin(selectedRoulette, index)} +
+                $"\t{colorWin(selectedRoulette, index)}\t{lowHighWin(selectedRoulette, index)}\t{dozensWin(selectedRoulette, index)}" +
                 $"\n{columnsWin(selectedRoulette, index)}\t{streetWin(selectedRoulette, index)}\t{sixNumberWin(selectedRoulette, index)}" +
                 $"\t{splitWin(selectedRoulette, index)}\t{cornerWin(selectedRoulette, index)}");
         }
@@ -45,47 +45,47 @@ namespace Roulette2017
 
         public int evenOddWin((string, string) arrayValue, int n)
         {
-
+            return n;
         }
 
-        public void colorWin((string, string) arrayValue, int n)
+        public int colorWin((string, string) arrayValue, int n)
         {
-
+            return n;
         }
 
-        public void lowHighWin()
+        public int lowHighWin((string, string) arrayValue, int n)
         {
-
+            return n;
         }
 
-        public void dozensWin()
+        public int dozensWin((string, string) arrayValue, int n)
         {
-
+            return n;
         }
 
-        public void columnsWin()
+        public int columnsWin((string, string) arrayValue, int n)
         {
-
+            return n;
         }
 
-        public void streetWin()
+        public int streetWin((string, string) arrayValue, int n)
         {
-
+            return n;
         }
 
-        public void sixNumberWin()
+        public int sixNumberWin((string, string) arrayValue, int n)
         {
-
+            return n;
         }
 
-        public void splitWin()
+        public int splitWin((string, string) arrayValue, int n)
         {
-
+            return n;
         }
 
-        public void cornerWin()
+        public int cornerWin((string, string) arrayValue, int n)
         {
-
+            return n;
         }
     }
 }
