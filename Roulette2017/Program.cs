@@ -10,6 +10,9 @@ namespace Roulette2017
     {
         static void Main(string[] args)
         {
+            RouletteMethods runRoulette = new RouletteMethods();
+            Random rand = new Random();
+            runRoulette.outputVictors(rand);
         }
     }
 }
