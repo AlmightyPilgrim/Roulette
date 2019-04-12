@@ -32,7 +32,7 @@ namespace Roulette2017
 
             Console.WriteLine($"The winning number is {selectedRoulette}");
             Console.WriteLine($"Winning bets are as follows:" +
-                $"\nBin Number {binWin(selectedRoulette, index)}\t{evenOddWin(selectedRoulette, index)}" +
+                $"\n{binWin(selectedRoulette, index)}\t{evenOddWin(selectedRoulette, index)}" +
                 $"\t{colorWin(selectedRoulette, index)}\t{lowHighWin(selectedRoulette, index)}\t{dozensWin(selectedRoulette, index)}" +
                 $"\n{columnsWin(selectedRoulette, index)}\t{streetWin(selectedRoulette, index)}\t{sixNumberWin(selectedRoulette, index)}" +
                 $"\t{splitWin(selectedRoulette, index)}\t{cornerWin(selectedRoulette, index)}");
@@ -40,31 +40,70 @@ namespace Roulette2017
 
         public int binWin((string, string) arrayValue, int n)
         {
+            Console.WriteLine($"Bin: {arrayValue.Item1}"); 
             return n;
         }
 
         public int evenOddWin((string, string) arrayValue, int n)
-        {
+        {            
+            if (n % 2 == 0)
+            {
+                Console.WriteLine("Evens win");
+            }
+            else
+            {
+                Console.WriteLine("Odds win");
+            }
             return n;
         }
 
         public int colorWin((string, string) arrayValue, int n)
         {
+            Console.WriteLine($"Color: {arrayValue.Item2}");
             return n;
         }
 
         public int lowHighWin((string, string) arrayValue, int n)
         {
+            if ((1 <= n) && (n <= 18))
+            {
+                Console.WriteLine("Lows win");
+            }
+            else if ((19 <= n) && (n <= 36))
+            {
+                Console.WriteLine("Highs win");
+            }
+            else
+            {
+                Console.WriteLine("House wins");
+            }
             return n;
         }
 
         public int dozensWin((string, string) arrayValue, int n)
         {
+            if ((1 <= n) && (n <= 12))
+            {
+                Console.WriteLine("First dozen win");
+            }
+            else if ((13 <= n) && (n <= 24))
+            {
+                Console.WriteLine("Second dozen win");
+            }
+            else if ((25 <= n) && (n <= 36))
+            {
+                Console.WriteLine("Third dozen win");
+            }
+            else
+            {
+                Console.WriteLine("House wins");
+            }
             return n;
         }
 
         public int columnsWin((string, string) arrayValue, int n)
         {
+           
             return n;
         }
 
@@ -85,6 +124,24 @@ namespace Roulette2017
 
         public int cornerWin((string, string) arrayValue, int n)
         {
+            // making the board relate to the location of n, setting up the corner victories
+            int toprightcorner = n + 4;
+            int right = n + 3;
+            int botrightcorner = n + 2;
+            int top = n + 1;
+            int bottom = n - 1;
+            int topleftcorner = n - 2;
+            int left = n - 3;
+            int botleftcorner = n - 4;
+            // values set to be used in if statement
+            if ((n == 0) || (n == 37))
+            {
+                Console.WriteLine("House wins");
+            }
+            else
+            {
+                
+            }
             return n;
         }
     }
