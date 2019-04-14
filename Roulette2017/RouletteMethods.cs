@@ -135,47 +135,47 @@ namespace Roulette2017
             }
             else if ((n == 4) || (n == 5) || (n == 6))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 4, 5, 6 wins");
             }
-            else if ((n == 7) || (n == 2) || (n == 3))
+            else if ((n == 7) || (n == 8) || (n == 9))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 7, 8, 9 wins");
             }
-            else if ((n == 10) || (n == 2) || (n == 3))
+            else if ((n == 10) || (n == 11) || (n == 12))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 10, 11, 12 wins");
             }
-            else if ((n == 13) || (n == 2) || (n == 3))
+            else if ((n == 13) || (n == 14) || (n == 15))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 13, 14, 15 wins");
             }
-            else if ((n == 16) || (n == 2) || (n == 3))
+            else if ((n == 16) || (n == 17) || (n == 18))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 16, 17, 18 wins");
             }
-            else if ((n == 19) || (n == 2) || (n == 3))
+            else if ((n == 19) || (n == 20) || (n == 21))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 19, 20, 21 wins");
             }
-            else if ((n == 22) || (n == 2) || (n == 3))
+            else if ((n == 22) || (n == 23) || (n == 24))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 22, 23, 24 wins");
             }
-            else if ((n == 25) || (n == 2) || (n == 27))
+            else if ((n == 25) || (n == 26) || (n == 27))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 25, 26, 27 wins");
             }
             else if ((n == 28) || (n == 29) || (n == 30))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 28, 29, 30 wins");
             }
             else if ((n == 31) || (n == 32) || (n == 33))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 31, 32, 33 wins");
             }
             else if ((n == 34) || (n == 35) || (n == 36))
             {
-                Console.WriteLine("Street 1, 2, 3 wins");
+                Console.WriteLine("Street 34, 35, 36 wins");
             }
             else
             {
@@ -186,11 +186,61 @@ namespace Roulette2017
 
         public int sixNumberWin((string, string) arrayValue, int n)
         {
+            if (( 1 <= n) && (n <= 6))
+            {
+
+            }
+            else if ((4 <= n) && (n <= 9))
+            {
+
+            }
+            else if ((7 <= n) && (n <= 12))
+            {
+
+            }
+            else if ((10 <= n) && (n <= 15))
+            {
+
+            }
+            else if ((13 <= n) && (n <= 18))
+            {
+
+            }
+            else if ((16 <= n) && (n <= 21))
+            {
+
+            }
+            else if ((19 <= n) && (n <= 24))
+            {
+
+            }
+            else if ((22 <= n) && (n <= 27))
+            {
+
+            }
+            else if ((25 <= n) && (n <= 27))
+            {
+
+            }
+            else if ((28 <= n) && (n <= 27))
+            {
+
+            }
+            else if ((31 <= n) && (n <= 36))
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("House wins");
+            }
             return n;
         }
 
         public int splitWin((string, string) arrayValue, int n)
         {
+            // switch statement with case for each number available
+            // will be redundant
             return n;
         }
 
