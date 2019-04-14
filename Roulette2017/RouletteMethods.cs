@@ -188,47 +188,47 @@ namespace Roulette2017
         {
             if (( 1 <= n) && (n <= 6))
             {
-
+                Console.WriteLine("1, 2, 3, 4, 5, 6 win");
             }
             else if ((4 <= n) && (n <= 9))
             {
-
+                Console.WriteLine("4, 5, 6, 7, 8, 9 win");
             }
             else if ((7 <= n) && (n <= 12))
             {
-
+                Console.WriteLine("7, 8, 9, 10, 11, 12 win");
             }
             else if ((10 <= n) && (n <= 15))
             {
-
+                Console.WriteLine("10, 11, 12, 13, 14, 15 win");
             }
             else if ((13 <= n) && (n <= 18))
             {
-
+                Console.WriteLine("13, 14, 15, 16, 17, 18 win");
             }
             else if ((16 <= n) && (n <= 21))
             {
-
+                Console.WriteLine("16, 17, 18, 19, 20, 21 win");
             }
             else if ((19 <= n) && (n <= 24))
             {
-
+                Console.WriteLine("19, 20, 21, 22, 23, 24 win");
             }
             else if ((22 <= n) && (n <= 27))
             {
-
+                Console.WriteLine("22, 23, 24, 25, 26, 27 win");
             }
-            else if ((25 <= n) && (n <= 27))
+            else if ((25 <= n) && (n <= 30))
             {
-
+                Console.WriteLine("25, 26, 27, 28, 29, 30 win");
             }
-            else if ((28 <= n) && (n <= 27))
+            else if ((30 <= n) && (n <= 27))
             {
-
+                Console.WriteLine("28, 29, 30, 31, 32, 33 win");
             }
             else if ((31 <= n) && (n <= 36))
             {
-
+                Console.WriteLine("31, 32, 33, 34, 35, 36 win");
             }
             else
             {
@@ -239,84 +239,29 @@ namespace Roulette2017
 
         public int splitWin((string, string) arrayValue, int n)
         {
-            // switch statement with case for each number available
-            // will be redundant
-            switch (n)
+            if ((n == 0) || (n == 37))
             {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
-                    break;
-                case 10:
-                    break;
-                case 11:
-                    break;
-                case 12:
-                    break;
-                case 13:
-                    break;
-                case 14:
-                    break;
-                case 15:
-                    break;
-                case 16:
-                    break;
-                case 17:
-                    break;
-                case 18:
-                    break;
-                case 19:
-                    break;
-                case 20:
-                    break;
-                case 21:
-                    break;
-                case 22:
-                    break;
-                case 23:
-                    break;
-                case 24:
-                    break;
-                case 25:
-                    break;
-                case 26:
-                    break;
-                case 27:
-                    break;
-                case 28:
-                    break;
-                case 29:
-                    break;
-                case 30:
-                    break;
-                case 31:
-                    break;
-                case 32:
-                    break;
-                case 33:
-                    break;
-                case 34:
-                    break;
-                case 35:
-                    break;
-                case 36:
-                    break;
-                default:
-                    break;
+                Console.WriteLine("House wins");
+            }
+            else
+            {
+                // taking column method and applying it to corners, gonna be redundant code
+                if ((n == 1) || (n == 4) || (n == 7) || (n == 10) || (n == 13) || (n == 16) ||
+                     (n == 19) || (n == 22) || (n == 25) || (n == 28) || (n == 31) || (n == 34))
+                {
+                    Console.WriteLine($"{n}, {n + 1} win");
+                }
+                else if ((n == 2) || (n == 5) || (n == 8) || (n == 11) || (n == 14) || (n == 17) ||
+                     (n == 20) || (n == 23) || (n == 26) || (n == 29) || (n == 32) || (n == 35))
+                {
+                    Console.WriteLine($"{n}, {n + 1} win" +
+                        $"\n{n}, {n - 1} win");
+                }
+                else if ((n == 3) || (n == 6) || (n == 9) || (n == 12) || (n == 15) || (n == 18) ||
+                     (n == 21) || (n == 24) || (n == 27) || (n == 30) || (n == 33) || (n == 36))
+                {
+                    Console.WriteLine($"{n}, {n - 1} win");
+                }
             }
             return n;
         }
@@ -325,7 +270,7 @@ namespace Roulette2017
         {
             if ((n == 0) || (n == 37))
             {
-
+                Console.WriteLine("House Wins");
             }
             else
             {
@@ -333,17 +278,52 @@ namespace Roulette2017
                 if ((n == 1) || (n == 4) || (n == 7) || (n == 10) || (n == 13) || (n == 16) ||
                      (n == 19) || (n == 22) || (n == 25) || (n == 28) || (n == 31) || (n == 34))
                 {
-
+                    switch (n) // switch statement to set aside the outsiders that either connect with 0, or add to nonpresent values
+                    {
+                        case 1:
+                            Console.WriteLine($"{n}, {n+1}, {n+4}, {n+3} win");
+                            break;
+                        case 34:
+                            Console.WriteLine($"{n-3}, {n-2}, {n}, {n +1} win");
+                            break;
+                        default: // using relationship based pattern amongst all the numbers to determine "equation"
+                            Console.WriteLine($"{n}, {n-3}, {n-2}, {n+1} win" +
+                                $"\n{n}, {n+1}, {n+3}, {n+4} win");
+                            break;
+                    }
                 }
                 else if ((n == 2) || (n == 5) || (n == 8) || (n == 11) || (n == 14) || (n == 17) ||
                      (n == 20) || (n == 23) || (n == 26) || (n == 29) || (n == 32) || (n == 35))
                 {
-
+                    switch (n) // switch statement to set aside the outsiders that either connect with 0, or add to nonpresent values
+                    {
+                        case 2:
+                            break;
+                        case 35:
+                            break;
+                        default:
+                            Console.WriteLine($"{n}, {n - 1}, {n - 4}, {n - 3} win" +
+                                $"\n{n}, {n - 3}, {n - 2}, {n + 1} win" +
+                                $"\n{n}, {n + 1}, {n + 3}, {n + 4} win" +
+                                $"\n{n}, {n - 1}, {n + 2}, {n + 3} win");
+                            break;
+                    }
                 }
                 else if ((n == 3) || (n == 6) || (n == 9) || (n == 12) || (n == 15) || (n == 18) ||
                      (n == 21) || (n == 24) || (n == 27) || (n == 30) || (n == 33) || (n == 36))
                 {
+                    switch (n) // switch statement to set aside the outsiders that either connect with 0, or add to nonpresent values
+                    {
+                        case 3:
 
+                            break;
+                        case 36:
+                            break;
+                        default:
+                            Console.WriteLine($"{n}, {n - 1}, {n - 4}, {n - 3} win" +
+                                $"\n\n{n}, {n - 1}, {n + 2}, {n + 3} win");
+                            break;
+                    }
                 }
                 else
                 {
