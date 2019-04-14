@@ -31,11 +31,17 @@ namespace Roulette2017
             selectedRoulette = rouletteArray.ElementAt(index);
 
             Console.WriteLine($"The winning number is {selectedRoulette}");
-            Console.WriteLine($"Winning bets are as follows:" +
-                $"\n{binWin(selectedRoulette, index)}\t{evenOddWin(selectedRoulette, index)}" +
-                $"\t{colorWin(selectedRoulette, index)}\t{lowHighWin(selectedRoulette, index)}\t{dozensWin(selectedRoulette, index)}" +
-                $"\n{columnsWin(selectedRoulette, index)}\t{streetWin(selectedRoulette, index)}\t{sixNumberWin(selectedRoulette, index)}" +
-                $"\t{splitWin(selectedRoulette, index)}\t{cornerWin(selectedRoulette, index)}");
+            Console.WriteLine($"Winning bets are as follows");
+            binWin(selectedRoulette, index);
+            evenOddWin(selectedRoulette, index);
+            colorWin(selectedRoulette, index);
+            lowHighWin(selectedRoulette, index);
+            dozensWin(selectedRoulette, index);
+            columnsWin(selectedRoulette, index);
+            streetWin(selectedRoulette, index);
+            sixNumberWin(selectedRoulette, index);
+            splitWin(selectedRoulette, index);
+            cornerWin(selectedRoulette, index);
         }
 
         public int binWin((string, string) arrayValue, int n)
@@ -298,8 +304,12 @@ namespace Roulette2017
                     switch (n) // switch statement to set aside the outsiders that either connect with 0, or add to nonpresent values
                     {
                         case 2:
+                            Console.WriteLine($"{n}, {n - 1}, {n + 2}, {n + 3} win" +
+                                $"\n{n}, {n + 1}, {n + 3}, {n + 4} win");
                             break;
                         case 35:
+                            Console.WriteLine($"{n}, {n - 1}, {n - 4}, {n - 3} win" +
+                                $"\n{n}, {n - 3}, {n - 2}, {n + 1} win");
                             break;
                         default:
                             Console.WriteLine($"{n}, {n - 1}, {n - 4}, {n - 3} win" +
@@ -315,9 +325,10 @@ namespace Roulette2017
                     switch (n) // switch statement to set aside the outsiders that either connect with 0, or add to nonpresent values
                     {
                         case 3:
-
+                            Console.WriteLine($"{n}, {n-1}, {n+3}, {n+2}");
                             break;
                         case 36:
+                            Console.WriteLine($"{n}, {n-1}, {n-4}, {n-3}");
                             break;
                         default:
                             Console.WriteLine($"{n}, {n - 1}, {n - 4}, {n - 3} win" +
@@ -327,7 +338,7 @@ namespace Roulette2017
                 }
                 else
                 {
-
+                    Console.WriteLine("Something went wrong");
                 }
             }
             
