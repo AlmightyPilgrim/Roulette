@@ -241,39 +241,116 @@ namespace Roulette2017
         {
             // switch statement with case for each number available
             // will be redundant
+            switch (n)
+            {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+                case 11:
+                    break;
+                case 12:
+                    break;
+                case 13:
+                    break;
+                case 14:
+                    break;
+                case 15:
+                    break;
+                case 16:
+                    break;
+                case 17:
+                    break;
+                case 18:
+                    break;
+                case 19:
+                    break;
+                case 20:
+                    break;
+                case 21:
+                    break;
+                case 22:
+                    break;
+                case 23:
+                    break;
+                case 24:
+                    break;
+                case 25:
+                    break;
+                case 26:
+                    break;
+                case 27:
+                    break;
+                case 28:
+                    break;
+                case 29:
+                    break;
+                case 30:
+                    break;
+                case 31:
+                    break;
+                case 32:
+                    break;
+                case 33:
+                    break;
+                case 34:
+                    break;
+                case 35:
+                    break;
+                case 36:
+                    break;
+                default:
+                    break;
+            }
             return n;
         }
 
         public int cornerWin((string, string) arrayValue, int n)
         {
-            // taking column method and applying it to corners, gonna be redundant code
-            if ((n == 1) || (n == 4) || (n == 7) || (n == 10) || (n == 13) || (n == 16) ||
-                 (n == 19) || (n == 22) || (n == 25) || (n == 28) || (n == 31) || (n == 34))
-            {
-                Console.WriteLine("Column 1 wins");
-            }
-            else if ((n == 2) || (n == 5) || (n == 8) || (n == 11) || (n == 14) || (n == 17) ||
-                 (n == 20) || (n == 23) || (n == 26) || (n == 29) || (n == 32) || (n == 35))
-            {
-                Console.WriteLine("Column 2 wins");
-            }
-            else if ((n == 3) || (n == 6) || (n == 9) || (n == 12) || (n == 15) || (n == 18) ||
-                 (n == 21) || (n == 24) || (n == 27) || (n == 30) || (n == 33) || (n == 36))
-            {
-                Console.WriteLine("Colum 3 wins");
-            }
-            else
-            {
-                Console.WriteLine("House wins");
-            }
             if ((n == 0) || (n == 37))
             {
-                Console.WriteLine("House wins");
+
             }
             else
             {
-                
+                // taking column method and applying it to corners, gonna be redundant code
+                if ((n == 1) || (n == 4) || (n == 7) || (n == 10) || (n == 13) || (n == 16) ||
+                     (n == 19) || (n == 22) || (n == 25) || (n == 28) || (n == 31) || (n == 34))
+                {
+
+                }
+                else if ((n == 2) || (n == 5) || (n == 8) || (n == 11) || (n == 14) || (n == 17) ||
+                     (n == 20) || (n == 23) || (n == 26) || (n == 29) || (n == 32) || (n == 35))
+                {
+
+                }
+                else if ((n == 3) || (n == 6) || (n == 9) || (n == 12) || (n == 15) || (n == 18) ||
+                     (n == 21) || (n == 24) || (n == 27) || (n == 30) || (n == 33) || (n == 36))
+                {
+
+                }
+                else
+                {
+
+                }
             }
+            
             return n;
         }
     }
