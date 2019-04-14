@@ -103,12 +103,84 @@ namespace Roulette2017
 
         public int columnsWin((string, string) arrayValue, int n)
         {
-           
-            return n;
+            if ((n == 1) || (n == 4) || (n == 7) || (n == 10) || (n == 13) || (n == 16) ||
+                 (n == 19) || (n == 22) || (n == 25) || (n == 28) || (n == 31) || (n == 34))
+            {
+                Console.WriteLine("Column 1 wins");
+            }
+            else if ((n == 2) || (n == 5) || (n == 8) || (n == 11) || (n == 14) || (n == 17) ||
+                 (n == 20) || (n == 23) || (n == 26) || (n == 29) || (n == 32) || (n == 35))
+            {
+                Console.WriteLine("Column 2 wins");
+            }
+            else if ((n == 3) || (n == 6) || (n == 9) || (n == 12) || (n == 15) || (n == 18) ||
+                 (n == 21) || (n == 24) || (n == 27) || (n == 30) || (n == 33) || (n == 36))
+            {
+                Console.WriteLine("Colum 3 wins");
+            }
+            else
+            {
+                Console.WriteLine("House wins");
+            }
+                return n;
         }
 
         public int streetWin((string, string) arrayValue, int n)
         {
+            // try to find a way to not have if statement here
+            // thought process is there, implementation off
+            if ((n == 1) || (n == 2) || (n == 3))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 4) || (n == 5) || (n == 6))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 7) || (n == 2) || (n == 3))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 10) || (n == 2) || (n == 3))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 13) || (n == 2) || (n == 3))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 16) || (n == 2) || (n == 3))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 19) || (n == 2) || (n == 3))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 22) || (n == 2) || (n == 3))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 25) || (n == 2) || (n == 27))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 28) || (n == 29) || (n == 30))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 31) || (n == 32) || (n == 33))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else if ((n == 34) || (n == 35) || (n == 36))
+            {
+                Console.WriteLine("Street 1, 2, 3 wins");
+            }
+            else
+            {
+                Console.WriteLine("House wins 0, 00");
+            }
             return n;
         }
 
@@ -124,16 +196,26 @@ namespace Roulette2017
 
         public int cornerWin((string, string) arrayValue, int n)
         {
-            // making the board relate to the location of n, setting up the corner victories
-            int toprightcorner = n + 4;
-            int right = n + 3;
-            int botrightcorner = n + 2;
-            int top = n + 1;
-            int bottom = n - 1;
-            int topleftcorner = n - 2;
-            int left = n - 3;
-            int botleftcorner = n - 4;
-            // values set to be used in if statement
+            // taking column method and applying it to corners, gonna be redundant code
+            if ((n == 1) || (n == 4) || (n == 7) || (n == 10) || (n == 13) || (n == 16) ||
+                 (n == 19) || (n == 22) || (n == 25) || (n == 28) || (n == 31) || (n == 34))
+            {
+                Console.WriteLine("Column 1 wins");
+            }
+            else if ((n == 2) || (n == 5) || (n == 8) || (n == 11) || (n == 14) || (n == 17) ||
+                 (n == 20) || (n == 23) || (n == 26) || (n == 29) || (n == 32) || (n == 35))
+            {
+                Console.WriteLine("Column 2 wins");
+            }
+            else if ((n == 3) || (n == 6) || (n == 9) || (n == 12) || (n == 15) || (n == 18) ||
+                 (n == 21) || (n == 24) || (n == 27) || (n == 30) || (n == 33) || (n == 36))
+            {
+                Console.WriteLine("Colum 3 wins");
+            }
+            else
+            {
+                Console.WriteLine("House wins");
+            }
             if ((n == 0) || (n == 37))
             {
                 Console.WriteLine("House wins");
